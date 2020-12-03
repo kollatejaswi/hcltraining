@@ -12,7 +12,6 @@ public class EmpDetails {
 		String st[]=new String[100];
 		String b[]=new String[100];
 		Scanner s=new Scanner(System.in);
-        Emp e=new Emp();
 		System.out.println("enter the no of user you want to add");
 		no=s.nextInt();
 		s.nextLine();
@@ -24,14 +23,14 @@ public class EmpDetails {
 		     }
 		    for(String a:st)
 		    {
+			Emp e=new Emp();
 		    	b= a.split(",");
 		    	e.setName(b[0]);
 		    	e.setContactno(b[1]);
 		    	e.setUsername(b[2]);;
 		    	e.setEmailid(b[3]);
-		    	
+		    	em.add(e);
 		    }
-		    em.add(e);
 		System.out.println("name\t"+"contactno\t"+"username\t"+"emailid");
 		Iterator<Emp>itr=em.iterator();
 		while(itr.hasNext())
